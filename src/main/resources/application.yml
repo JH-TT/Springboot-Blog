@@ -15,11 +15,6 @@ spring:
       client:
         registration:
           google:
-            client-id: 377856934675-uokqskncpljr9k7cimo8lu1ojso12105.apps.googleusercontent.com
-            client-secret: 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
             scope:
               - email
               - profile
-jwt:
-  issuer: leejongho9803@gmail.com
-  secret_key: study-springboot
