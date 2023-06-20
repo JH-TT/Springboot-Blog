@@ -42,3 +42,12 @@ jobs:
           version_label: github-action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
           deployment_package: ./build/libs/${{env.artifact}}
+
+      # mysql 설정
+      - name: Setup MySQL
+        uses: samin/mysql-action@v1
+        with:
+          character set server: 'utf8'
+          mysql database:
+          mysql user: lee
+          mysql password: ${{ secrets.MYSQL_PASSWORD }}
