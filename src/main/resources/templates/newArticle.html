@@ -26,6 +26,9 @@
         </section>
         <button th:if="${article.id} != null" type="button" id="modify-btn" class="btn btn-primary btn-sm">수정</button>
         <button th:if="${article.id} == null" type="button" id="create-btn" class="btn btn-primary btn-sm">등록</button>
+        <button type="button" id="cancle-btn"
+                th:onclick="|location.href='/articles'|"
+                class="btn btn-primary btn-sm">취소</button>
       </article>
     </div>
   </div>
