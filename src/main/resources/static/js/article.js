@@ -52,9 +52,14 @@ const createButton = document.getElementById("create-btn");
 
 if (createButton) {
     createButton.addEventListener('click', (event) => {
+        const content = document.getElementById("content").value
+        if (content.length > 255) {
+            alert("글자수는 최대 255자 입니다.")
+            return
+        }
         body = JSON.stringify({
             title: document.getElementById("title").value,
-            content: document.getElementById("content").value,
+            content: content,
         });
 
         function success() {
